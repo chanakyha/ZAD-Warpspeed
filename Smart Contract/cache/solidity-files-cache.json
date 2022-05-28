@@ -1,0 +1,40 @@
+{
+  "_format": "hh-sol-cache-2",
+  "files": {
+    "C:\\Users\\Prasanna\\Documents\\ZAD-Warpspeed\\Smart Contract\\contracts\\party.sol": {
+      "lastModificationDate": 1653753654548,
+      "contentHash": "c2acef0ed11917070270266dbfca20e4",
+      "sourceName": "contracts/party.sol",
+      "solcConfig": {
+        "version": "0.8.3",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.3"
+      ],
+      "artifacts": [
+        "Parties"
+      ]
+    }
+  }
+}
