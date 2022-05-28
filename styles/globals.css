@@ -1,9 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+*{
+    font-family: 'Montserrat', sans-serif !important;
+}
 
-
-** {
-    font-family: 'Lato', sans-serif;
+::-webkit-scrollbar{
+    display: none;
 }

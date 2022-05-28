@@ -1,11 +1,15 @@
+import Image from "next/image";
 import React from "react";
+import Logo from "../assets/logo-dark.png";
 
 const Navbar = () => {
   return (
     <div>
-      <div className="navbar bg-base-100 mt-5 px-5">
-        <div className="navbar-start">
-          <a className="btn btn-ghost normal-case text-xl">ZAD</a>
+      <div className="navbar bg-base-100 mt-5 px-5 w-full">
+        <div className="navbar-start ">
+          <div className="w-1/5 btn btn-ghost">
+            <Image src={Logo} />
+          </div>
         </div>
         <div className="navbar-center hidden lg:flex"></div>
         <div className="navbar-end space-x-5">
