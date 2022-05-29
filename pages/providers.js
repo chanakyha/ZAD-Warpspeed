@@ -30,11 +30,6 @@ const Providers = () => {
       name: "Prasanna",
       space: "5",
     },
-    {
-      id: 3,
-      name: "Prasanna",
-      space: "5",
-    },
   ];
 
   return (

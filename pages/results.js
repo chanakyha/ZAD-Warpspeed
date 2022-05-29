@@ -1,19 +1,14 @@
 import React, { useState } from "react";
+import { useRouter } from "next/router";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import Stats from "../components/Stats";
 import Table from "../components/Table";
 
 const Results = () => {
-  const query = {
-    name: "Chanakyha V",
-    depAir: "Madras",
-    desAir: "Bangkok",
-    number: "7550148119",
-    dateTime: "2022-05-28:19:25",
-  };
-
   const [buySpace, setBuySpace] = useState(1);
+  const router = useRouter();
+  const query = router.query;
 
   return (
     <div>

@@ -40,7 +40,7 @@ const Stats = ({ dateTime, query, buySpace, setBuySpace }) => {
           </svg>
         </div>
         <div className="stat-title">Departure</div>
-        <div className="stat-value">{query.depAir}</div>
+        <div className="stat-value">{query.DepAir}</div>
       </div>
 
       <div className="stat">
@@ -60,7 +60,7 @@ const Stats = ({ dateTime, query, buySpace, setBuySpace }) => {
           </svg>
         </div>
         <div className="stat-title">Destination</div>
-        <div className="stat-value">{query.desAir}</div>
+        <div className="stat-value">{query.DesAir}</div>
       </div>
       <div className="stat">
         <div className="stat-value">
