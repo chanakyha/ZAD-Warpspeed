@@ -1,7 +1,7 @@
 {
-  "name": "zad-smart-contract",
+  "name": "nft-contract",
   "version": "1.0.0",
-  "description": "a smart contract to store baggage and party info",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,11 +10,11 @@
   "license": "MIT",
   "devDependencies": {
     "@nomiclabs/hardhat-ethers": "^2.0.6",
-    "@nomiclabs/hardhat-etherscan": "^3.0.3",
     "ethers": "^5.0.0",
     "hardhat": "^2.9.6"
   },
   "dependencies": {
+    "@alch/alchemy-web3": "^1.4.2",
     "@openzeppelin/contracts": "^4.6.0",
     "dotenv": "^16.0.1"
   }
