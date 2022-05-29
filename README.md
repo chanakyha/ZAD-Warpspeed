@@ -9,9 +9,11 @@ Solution : To solve the above mentioned Problem , we are introducing ZAD. ZAD is
 
     What if , The luggage got shared has illegal items ( like Bomb , Drugs ,etc., ) / The person with whom you shared your luggage goes away with your luggage ?
     
-    All users of our DAPP , have their E-KYC verified while they register to our DAPP.
+    All users of our DAPP , have their E-KYC verified while they register to our DAPP ( This makes all our users more credible ) . To avoid theft of luggage , an NFT which is having greater value than the luggage , will be shared to the wallet of owner of the luggage.
 
 Business Model : Zad Dapp follows C2C ( Customer to Customer ) Business Model . We will earn our revenue from the transaction between the customers.
+
+Tech Stacks :
 
 
 
