@@ -21,6 +21,7 @@ const SellerDetails = () => {
     //TODO: implement
     const { status } = await createContract(walletAddress, weight, val);
     alert(status);
+    alert("NFT Request is Sent");
   };
 
   return (

@@ -35,7 +35,7 @@ export const mintNFT = async (name, value) => {
     from: window.ethereum.selectedAddress, // must match user's active address.
     value: value,
     data: window.contract.methods
-      .mintNFT(window.ethereum.selectedAddress, tokenURI)
+      .mintToken(window.ethereum.selectedAddress, tokenURI, 10000)
       .encodeABI(), //make call to NFT smart contract
   };
 

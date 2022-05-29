@@ -4,7 +4,6 @@ import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import SellerDetails from "../components/SellerDetails";
 import Stats from "../components/Stats2";
-import Table from "../components/Table";
 
 const Providers = () => {
   const query = {
