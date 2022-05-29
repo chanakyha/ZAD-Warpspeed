@@ -46,7 +46,7 @@ const Providers = () => {
           <div className="overflow-scroll mb-3 grid md:grid-cols-2 lg:grid-cols-3 gap-2 space-y-3">
             {sampleProviders.map((provider) => (
               <Card
-                id={provider.id}
+                key={provider.id}
                 name={provider.name}
                 space={provider.space}
                 setDisplaySellerData={setDisplaySellerData}
