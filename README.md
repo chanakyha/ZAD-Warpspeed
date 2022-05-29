@@ -15,6 +15,37 @@ Business Model : Zad Dapp follows C2C ( Customer to Customer ) Business Model . 
 
 Tech Stacks :
 
+FrontEnd:
+
+Next.Js
+React Icons
+Backend:
+Node(for app)
+Gun(for chat)
+
+Database:
+
+Firebase
+Pinata
+
+Web 3:
+
+Wallet:
+Metamask
+
+Etheruem blockchain library:
+
+Ether.js
+Blockchain API service:
+Alchemy
+Blockchain deployment library:
+Hardhat
+Smart contract validation:
+Etherscan
+
+Testnet:
+Goerli
+
 
 
 A project by Prayasu,Prasanna,Chanahkya,Ragul
