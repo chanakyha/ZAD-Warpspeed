@@ -5,7 +5,6 @@ import { mintNFT } from "../utils/interactNFT";
 
 const SendNFT = () => {
   const [otp, setOTP] = useState();
-  mintNFT("mintNFT", 10000);
 
   return (
     <div>
@@ -27,7 +26,17 @@ const SendNFT = () => {
               />
               <div className="card-actions justify-center">
                 <button className="btn btn-primary">Submit OTP</button>
-                <button className="btn btn-primary">MInt and Send NFT</button>
+                <button
+                  className="btn btn-primary"
+                  onClick={() =>
+                    mintNFT(
+                      "0xc1d8d3dd4A1dCB37bc560B6645878516ad381a80",
+                      "10000"
+                    )
+                  }
+                >
+                  MInt and Send NFT
+                </button>
               </div>
             </div>
           </div>
