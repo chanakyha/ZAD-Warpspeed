@@ -6,7 +6,6 @@ import Details from "../components/Details";
 import Navbar from "../components/Navbar";
 import { useRouter } from "next/router";
 import toast from "react-hot-toast";
-
 import {
   partiesContract,
   connectWallet,

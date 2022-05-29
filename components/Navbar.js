@@ -3,7 +3,7 @@ import React from "react";
 import Logo from "../assets/logo-dark.png";
 import { useEffect, useState } from "react";
 import { db, collection, getDocs, getDoc, doc } from "../utils/firebase";
-
+import { useRouter } from "next/router";
 import { connectWallet, getCurrentWalletConnected } from "../utils/interact.js";
 
 const Navbar = () => {
@@ -12,7 +12,7 @@ const Navbar = () => {
   const [userData, setUserData] = useState("");
 
   const [alreadyUser, setAlreadyUser] = useState(0);
-
+  const router = useRouter();
   const myFunction = async () => {
     const { address, status } = await getCurrentWalletConnected();
     setWallet(address);
@@ -22,10 +22,9 @@ const Navbar = () => {
 
   useEffect(() => {
     myFunction();
-  }); // Note the curly braces around myFunction!
+  });
 
   function addWalletListener() {
-    //TODO: implement
     if (window.ethereum) {
       window.ethereum.on("accountsChanged", (accounts) => {
         if (accounts.length > 0) {
@@ -59,15 +58,28 @@ const Navbar = () => {
       <div className="navbar bg-base-100 mt-5 px-5 w-full">
         <div className="navbar-start ">
           <div className="w-1/5 btn btn-ghost">
-            <Image src={Logo} />
+            <Image src={Logo} onClick={() => router.push("/")} />
           </div>
         </div>
         <div className="navbar-center hidden lg:flex"></div>
         <div className="navbar-end space-x-5">
-          <a className="btn btn-primary">Register User</a>
-          <a className="btn btn-primary" onClick={connectWalletPressed}>
-            Connect Wallet
-          </a>
+          {walletAddress || !alreadyUser ? (
+            <a
+              className="btn btn-primary"
+              onClick={() => router.push("/register")}
+            >
+              Register User
+            </a>
+          ) : (
+            <></>
+          )}
+          {!walletAddress ? (
+            <a className="btn btn-primary" onClick={connectWalletPressed}>
+              Connect Wallet
+            </a>
+          ) : (
+            <></>
+          )}
           <div className="flex flex-row items-center space-x-5 bg-accent p-2 rounded-xl dropdown dropdown-end">
             {walletAddress.length > 0 ? (
               String(walletAddress).substring(0, 6) +
