@@ -1,8 +1,11 @@
 import React, { useState } from "react";
+import { useRouter } from "next/router";
 
 const Table = ({ buySpace }) => {
   const [selectSpace, setSelectSpace] = useState(0);
   const [sellSpaceG, setSellSpaceG] = useState("");
+
+  const router = useRouter();
 
   return (
     <div className="overflow-x-auto w-full">
@@ -56,7 +59,10 @@ const Table = ({ buySpace }) => {
                 <></>
               )}
               {!buySpace ? (
-                <button className="btn btn-primary btn-xs">
+                <button
+                  onClick={router.push("/providers")}
+                  className="btn btn-primary btn-xs"
+                >
                   Show Providers
                 </button>
               ) : (

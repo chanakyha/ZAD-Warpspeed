@@ -1,9 +1,12 @@
 import React, { useState } from "react";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
+import { mintNFT } from "../utils/interactNFT";
 
 const SendNFT = () => {
   const [otp, setOTP] = useState();
+  const [val, setVal] = useState(10000);
+  mintNFT("mintNFT", val);
 
   return (
     <div>
