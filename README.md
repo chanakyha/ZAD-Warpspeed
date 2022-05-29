@@ -13,6 +13,11 @@ Solution : To solve the above mentioned Problem , we are introducing ZAD. ZAD is
 
 Business Model : Zad Dapp follows C2C ( Customer to Customer ) Business Model . We will earn our revenue from the transaction between the customers.
 
+Problems faced : 
+
+> We are new to Web 3.0 ( We faced technical issues , but together figured our how to solve )
+> This project idea needs more than 24 hours to make a proper MVP .
+
 Tech Stacks :
 
 FrontEnd:
