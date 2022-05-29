@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import Card from "../components/Card";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
+import SellerDetails from "../components/SellerDetails";
 import Stats from "../components/Stats2";
 import Table from "../components/Table";
 
@@ -32,12 +33,14 @@ const Providers = () => {
     },
   ];
 
+  const [displaySellerData, setDisplaySellerData] = useState(0);
+
   return (
     <div>
       <Navbar />
       <div className="divider" />
       <div className="mt-5 items-start flex flex-col md:flex-row justify-center w-full md:justify-start">
-        <Stats query={query} />
+        {displaySellerData ? <SellerDetails /> : <Stats query={query} />}
         <div className="divider md:divider-horizontal pb-7" />
         <div className="flex flex-col items-center flex-1 space-y-5">
           <h1 className="font-bold text-5xl">Providers</h1>
@@ -47,6 +50,8 @@ const Providers = () => {
                 id={provider.id}
                 name={provider.name}
                 space={provider.space}
+                setDisplaySellerData={setDisplaySellerData}
+                displaySellerData={displaySellerData}
               />
             ))}
           </div>

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import Logo from "../assets/logo-dark.png";
+import Logo from "../assets/zad-light.png";
 import { useEffect, useState } from "react";
 import { db, collection, getDocs, getDoc, doc } from "../utils/firebase";
 import { useRouter } from "next/router";

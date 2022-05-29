@@ -1,6 +1,6 @@
 import React from "react";
 
-const Card = ({ name, space }) => {
+const Card = ({ name, space, setDisplaySellerData, displaySellerData }) => {
   return (
     <div className="card w-96 bg-base-100 shadow-xl">
       <figure className="px-10 pt-10">
@@ -14,7 +14,16 @@ const Card = ({ name, space }) => {
         <h2 className="card-title">{name}</h2>
         <p>Luggage: {space} kg</p>
         <div className="card-actions">
-          <button className="btn btn-primary">Connect</button>
+          <button
+            className="btn btn-primary"
+            onClick={() => {
+              displaySellerData
+                ? setDisplaySellerData(0)
+                : setDisplaySellerData(1);
+            }}
+          >
+            Connect
+          </button>
         </div>
       </div>
     </div>
