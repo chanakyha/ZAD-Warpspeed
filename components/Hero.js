@@ -1,7 +1,7 @@
 import React from "react";
 import Logo from "../assets/logo-dark.png";
 import Image from "next/image";
-
+import Link from "next/link";
 const Hero = ({ loginId }) => {
   return (
     <div className="hero min-h-screen bg-base-200">
@@ -16,9 +16,11 @@ const Hero = ({ loginId }) => {
             excepturi exercitationem quasi. In deleniti eaque aut repudiandae et
             a id nisi.
           </p>
-          <label htmlFor={loginId} className="btn modal-button">
-            Get Started
-          </label>
+          <Link href="#secondSection" scroll={false}>
+            <label htmlFor={loginId} className="btn btn-primary modal-button">
+              Get Started
+            </label>
+          </Link>
         </div>
       </div>
     </div>

@@ -1,12 +1,19 @@
 import Head from "next/head";
-import Image from "next/image";
 import { useState } from "react";
-import toast from "react-hot-toast";
+import Footer from "../components/Footer";
 import Hero from "../components/Hero";
-import Modal from "../components/Modal";
+import Details from "../components/Details";
 import Navbar from "../components/Navbar";
+import { useRouter } from "next/router";
+import toast from "react-hot-toast";
+import {
+  partiesContract,
+  connectWallet,
+  getCurrentWalletConnected,
+} from "../utils/interact.js";
 
 export default function Home() {
+  const router = useRouter();
   const [state, setState] = useState({
     Fname: "",
     Lname: "",
@@ -17,7 +24,6 @@ export default function Home() {
   });
 
   const onSubmit = () => {
-    console.log("Working");
     if (
       !state.Fname ||
       !state.Lname ||
@@ -27,23 +33,27 @@ export default function Home() {
       !state.DateTime
     ) {
       toast.error("Please fill all the fields");
+    } else {
+      router.push(
+        `/results?name=${state.Fname + " " + state.Lname}&DepAir=${
+          state.DepAir
+        }&DesAir=${state.DesAir}&Number=${state.Number}&DateTime=${
+          state.DateTime
+        }`
+      );
     }
   };
   return (
     <div>
       <Head>
         <title>ZAD</title>
-        <Modal
-          id={"flight-info"}
-          onSubmit={onSubmit}
-          state={state}
-          setState={setState}
-        />
       </Head>
       <main>
         <Navbar />
-        <Hero loginId={"flight-info"} />
+        <Hero />
+        <Details state={state} setState={setState} onSubmit={onSubmit} />
       </main>
+      <Footer />
     </div>
   );
 }
