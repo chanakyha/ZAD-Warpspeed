@@ -79,7 +79,7 @@ export const connectWallet = async () => {
       
     };
 
-    export const createContract = async (txnno,address, weight,value) => {
+    export const createContract = async (address, weight,bagValue) => {
     //input error handling
     if (!window.ethereum || address === null) {
       return {
@@ -99,7 +99,7 @@ export const connectWallet = async () => {
       to: contractAddress, // Required except during contract publications.
       from: address, // must match user's active address.
       value: amt,
-      data: partiesContract.methods.addParty(txnno,address,parseInt(weight),parseInt(value)).encodeABI(),
+      data: partiesContract.methods.addParty(address,parseInt(weight),parseInt(bagValue)).encodeABI(),
     };
   
     //sign the transaction
