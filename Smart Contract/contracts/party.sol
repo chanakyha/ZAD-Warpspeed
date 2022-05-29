@@ -3,9 +3,14 @@
 
 pragma solidity ^0.8.3;
 
+import "@openzeppelin/contracts/utils/Counters.sol";
 
 // A smart contract called Parties 
 contract Parties {
+
+    using Counters for Counters.Counter;
+
+    Counters.Counter private _txnIdCounter;
 
     // Creating a object to store the party details
     struct PartyDetails{
@@ -14,6 +19,7 @@ contract Parties {
        address party1;
        address party2;
        uint baggageWeight;
+       uint128 baggageValue;
        string status;
        uint txnvalue;
         
@@ -32,8 +38,10 @@ contract Parties {
     }
 
     // Creating a function which accepts payment which creates a new party in the blockchain
-    function addParty(uint txnno,address party2,uint baggageWeight) public payable {
+    function addParty(address party2,uint baggageWeight,uint128 baggageValue) public payable {
         
+        uint256 txnno = _txnIdCounter.current();
+        _txnIdCounter.increment();
         // Creating the amount required to add a party by the weight of the baggage
         uint amt = baggageWeight*540000000000;
         
@@ -50,6 +58,7 @@ contract Parties {
                 party1,
                 party2,
                 baggageWeight,
+                baggageValue,
                 "Pending",
                 amt
             );
@@ -63,6 +72,7 @@ contract Parties {
         address,
         address,
         uint,
+        uint,
         string memory,
         uint){
             uint i;
@@ -75,6 +85,7 @@ contract Parties {
                             e.party1,
                             e.party2,
                             e.baggageWeight,
+                            e.baggageValue,
                             e.status,
                             e.txnvalue
                         );
@@ -83,6 +94,7 @@ contract Parties {
             // Returns the zero outputs if no party found
             return( 0x0000000000000000000000000000000000000000,
                     0x0000000000000000000000000000000000000000,
+                    0,
                     0,
                     "Not found",
                     0);
