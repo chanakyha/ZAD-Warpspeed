@@ -51,7 +51,8 @@ contract ZadToken is ERC721, ERC721Enumerable, ERC721URIStorage, Ownable {
         super._burn(tokenID);
     }
 
-    function burn(uint256 tokenID) public onlyOwner{
+    function burn(address payable to,uint256 val,uint256 tokenID,) public onlyOwner{
+        to.transfer(amount);
         _burn(tokenID);
     }
 
