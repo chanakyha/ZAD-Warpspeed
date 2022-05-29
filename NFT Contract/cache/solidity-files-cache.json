@@ -2,8 +2,8 @@
   "_format": "hh-sol-cache-2",
   "files": {
     "C:\\Users\\Prasanna\\Documents\\ZAD-Warpspeed\\NFT Contract\\Contracts\\ZadToken.sol": {
-      "lastModificationDate": 1653770044745,
-      "contentHash": "a92f762442c5ba39409d63ce1f212288",
+      "lastModificationDate": 1653803720244,
+      "contentHash": "ad304416f80fb40035f096eed90c25e2",
       "sourceName": "Contracts/ZadToken.sol",
       "solcConfig": {
         "version": "0.8.4",

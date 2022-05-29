@@ -6,7 +6,7 @@ import {pinJSONToIPFS} from './pinata.js'
 
 
 const contractABI = require('../NFT Contract/artifacts/Contracts/ZadToken.sol/ZadToken.json')
-const contractAddress = "0x4d749B7E0e6F80EA73a1395CA564428eA94307a5";
+const contractAddress = "0xB54b65E8EEe97AF22B163f1C0406ACAE3B152A3e";
 
 export const mintNFT = async (name, value) => {
 
